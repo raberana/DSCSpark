@@ -1,0 +1,854 @@
+C:\Users\raber\Documents\Projects\saturn>spark-submit --class org.apache.spark.deploy.DotnetRunner --master local bin\Debug\netcoreapp2.2\microsoft-spark-2.4.x-0.3.0.jar dotnet bin\Debug\netcoreapp2.2\Saturn.dll       
+19/07/18 00:37:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/07/18 00:37:47 INFO DotnetRunner: Starting DotnetBackend with dotnet.
+19/07/18 00:37:47 INFO DotnetRunner: Port number used by DotnetBackend is 61816
+19/07/18 00:37:47 INFO DotnetRunner: Adding key=spark.jars and value=file:/C:/Users/raber/Documents/Projects/saturn/bin/Debug/netcoreapp2.2/microsoft-spark-2.4.x-0.3.0.jar to environment
+19/07/18 00:37:47 INFO DotnetRunner: Adding key=spark.app.name and value=org.apache.spark.deploy.DotnetRunner to environment
+19/07/18 00:37:47 INFO DotnetRunner: Adding key=spark.submit.deployMode and value=client to environment
+19/07/18 00:37:47 INFO DotnetRunner: Adding key=spark.master and value=local to environment
+[2019-07-17T16:37:47.5264876Z] [RBLADE] [Info] [ConfigurationService] Using port 61816 for connection.
+[2019-07-17T16:37:47.5294823Z] [RBLADE] [Info] [JvmBridge] JvMBridge port is 61816
+19/07/18 00:37:47 INFO SparkContext: Running Spark version 2.4.1
+19/07/18 00:37:47 INFO SparkContext: Submitted application: saturn
+19/07/18 00:37:47 INFO SecurityManager: Changing view acls to: raber
+19/07/18 00:37:47 INFO SecurityManager: Changing modify acls to: raber
+19/07/18 00:37:47 INFO SecurityManager: Changing view acls groups to:
+19/07/18 00:37:47 INFO SecurityManager: Changing modify acls groups to:
+19/07/18 00:37:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(raber); groups with view permissions: Set(); users  with modify permissions: Set(raber); groups with modify permissions: Set()
+19/07/18 00:37:47 INFO Utils: Successfully started service 'sparkDriver' on port 61822.
+19/07/18 00:37:47 INFO SparkEnv: Registering MapOutputTracker
+19/07/18 00:37:47 INFO SparkEnv: Registering BlockManagerMaster
+19/07/18 00:37:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/07/18 00:37:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/07/18 00:37:47 INFO DiskBlockManager: Created local directory at C:\Users\raber\AppData\Local\Temp\blockmgr-a0944193-f7b6-444b-949d-2c07f3f2fd3e
+19/07/18 00:37:47 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+19/07/18 00:37:47 INFO SparkEnv: Registering OutputCommitCoordinator
+19/07/18 00:37:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/07/18 00:37:48 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://RBLADE:4040
+19/07/18 00:37:48 INFO SparkContext: Added JAR file:/C:/Users/raber/Documents/Projects/saturn/bin/Debug/netcoreapp2.2/microsoft-spark-2.4.x-0.3.0.jar at spark://RBLADE:61822/jars/microsoft-spark-2.4.x-0.3.0.jar with timestamp 1563381468159
+19/07/18 00:37:48 INFO Executor: Starting executor ID driver on host localhost
+19/07/18 00:37:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 61835.
+19/07/18 00:37:48 INFO NettyBlockTransferService: Server created on RBLADE:61835
+19/07/18 00:37:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/07/18 00:37:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, RBLADE, 61835, None)
+19/07/18 00:37:48 INFO BlockManagerMasterEndpoint: Registering block manager RBLADE:61835 with 366.3 MB RAM, BlockManagerId(driver, RBLADE, 61835, None)
+19/07/18 00:37:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, RBLADE, 61835, None)
+19/07/18 00:37:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, RBLADE, 61835, None)
+19/07/18 00:37:48 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Users/raber/Documents/Projects/saturn/spark-warehouse/').
+19/07/18 00:37:48 INFO SharedState: Warehouse path is 'file:/C:/Users/raber/Documents/Projects/saturn/spark-warehouse/'.
+19/07/18 00:37:49 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/07/18 00:37:50 INFO FileSourceStrategy: Pruning directories with: 
+19/07/18 00:37:50 INFO FileSourceStrategy: Post-Scan Filters: 
+19/07/18 00:37:50 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+19/07/18 00:37:50 INFO FileSourceScanExec: Pushed Filters: 
+19/07/18 00:37:51 INFO CodeGenerator: Code generated in 145.4429 ms
+19/07/18 00:37:51 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.6 KB, free 366.0 MB)
+19/07/18 00:37:51 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+19/07/18 00:37:51 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on RBLADE:61835 (size: 23.3 KB, free: 366.3 MB)
+19/07/18 00:37:51 INFO SparkContext: Created broadcast 0 from json at <unknown>:0
+19/07/18 00:37:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194796 bytes, open cost is considered as scanning 4194304 bytes.
+19/07/18 00:37:51 INFO SparkContext: Starting job: json at <unknown>:0
+19/07/18 00:37:51 INFO DAGScheduler: Got job 0 (json at <unknown>:0) with 1 output partitions
+19/07/18 00:37:51 INFO DAGScheduler: Final stage: ResultStage 0 (json at <unknown>:0)
+19/07/18 00:37:51 INFO DAGScheduler: Parents of final stage: List()
+19/07/18 00:37:51 INFO DAGScheduler: Missing parents: List()
+19/07/18 00:37:51 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at json at <unknown>:0), which has no missing parents
+19/07/18 00:37:51 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 9.7 KB, free 366.0 MB)
+19/07/18 00:37:51 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.4 KB, free 366.0 MB)
+19/07/18 00:37:51 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on RBLADE:61835 (size: 5.4 KB, free: 366.3 MB)
+19/07/18 00:37:51 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/07/18 00:37:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at json at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/07/18 00:37:51 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/07/18 00:37:51 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8345 bytes)
+19/07/18 00:37:51 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/07/18 00:37:51 INFO Executor: Fetching spark://RBLADE:61822/jars/microsoft-spark-2.4.x-0.3.0.jar with timestamp 1563381468159
+19/07/18 00:37:51 INFO TransportClientFactory: Successfully created connection to RBLADE/192.168.0.188:61822 after 15 ms (0 ms spent in bootstraps)
+19/07/18 00:37:51 INFO Utils: Fetching spark://RBLADE:61822/jars/microsoft-spark-2.4.x-0.3.0.jar to C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336\fetchFileTemp656556482847957812.tmp
+19/07/18 00:37:52 INFO Executor: Adding file:/C:/Users/raber/AppData/Local/Temp/spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38/userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336/microsoft-spark-2.4.x-0.3.0.jar to class loader
+19/07/18 00:37:52 INFO FileScanRDD: Reading File path: file:///C:/Users/raber/Documents/Projects/saturn/sample-application, range: 0-492, partition values: [empty row]
+19/07/18 00:37:52 INFO CodeGenerator: Code generated in 10.2043 ms
+19/07/18 00:37:52 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2444 bytes result sent to driver
+19/07/18 00:37:52 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 439 ms on localhost (executor driver) (1/1)
+19/07/18 00:37:52 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/07/18 00:37:52 INFO DAGScheduler: ResultStage 0 (json at <unknown>:0) finished in 0.601 s
+19/07/18 00:37:52 INFO DAGScheduler: Job 0 finished: json at <unknown>:0, took 0.693686 s
+root
+ |-- applicationNumber: string (nullable = true)
+ |-- customerInfo: struct (nullable = true)
+ |    |-- contactNumber: string (nullable = true)
+ |    |-- firstName: string (nullable = true)
+ |    |-- lastName: string (nullable = true)
+ |-- quoteInfo: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- dealer: string (nullable = true)
+ |    |    |-- msrp: long (nullable = true)
+ |    |    |-- quoteNumber: string (nullable = true)
+ |    |    |-- showroom: string (nullable = true)
+ |    |    |-- vehicleInfo: struct (nullable = true)
+ |    |    |    |-- assetClass: string (nullable = true)
+ |    |    |    |-- assetModel: string (nullable = true)
+
+19/07/18 00:37:52 INFO FileSourceStrategy: Pruning directories with: 
+19/07/18 00:37:52 INFO FileSourceStrategy: Post-Scan Filters: 
+19/07/18 00:37:52 INFO FileSourceStrategy: Output Data Schema: struct<applicationNumber: string, customerInfo: struct<contactNumber: string, firstName: string, lastName: string ... 1 more fields>, quoteInfo: array<struct<dealer:string,msrp:bigint,quoteNumber:string,showroom:string,vehicleInfo:struct<assetClass:string,assetModel:string>>> ... 1 more fields>
+19/07/18 00:37:52 INFO FileSourceScanExec: Pushed Filters: 
+19/07/18 00:37:52 INFO CodeGenerator: Code generated in 13.6801 ms
+19/07/18 00:37:52 INFO CodeGenerator: Code generated in 22.9727 ms
+19/07/18 00:37:52 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.6 KB, free 365.7 MB)
+19/07/18 00:37:52 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+19/07/18 00:37:52 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on RBLADE:61835 (size: 23.3 KB, free: 366.2 MB)
+19/07/18 00:37:52 INFO SparkContext: Created broadcast 2 from showString at <unknown>:0
+19/07/18 00:37:52 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194796 bytes, open cost is considered as scanning 4194304 bytes.
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 22
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 24
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 14
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 21
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 9
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 10
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 26
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 8
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 12
+19/07/18 00:37:52 INFO SparkContext: Starting job: showString at <unknown>:0
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 23
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 7
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 6
+19/07/18 00:37:52 INFO DAGScheduler: Got job 1 (showString at <unknown>:0) with 1 output partitions
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 29
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 5
+19/07/18 00:37:52 INFO DAGScheduler: Final stage: ResultStage 1 (showString at <unknown>:0)
+19/07/18 00:37:52 INFO DAGScheduler: Parents of final stage: List()
+19/07/18 00:37:52 INFO DAGScheduler: Missing parents: List()
+19/07/18 00:37:52 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[6] at showString at <unknown>:0), which has no missing parents
+19/07/18 00:37:52 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 16.8 KB, free 365.7 MB)
+19/07/18 00:37:52 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.4 KB, free 365.7 MB)
+19/07/18 00:37:52 INFO BlockManagerInfo: Removed broadcast_1_piece0 on RBLADE:61835 in memory (size: 5.4 KB, free: 366.3 MB)
+19/07/18 00:37:52 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on RBLADE:61835 (size: 7.4 KB, free: 366.2 MB)
+19/07/18 00:37:52 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+19/07/18 00:37:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[6] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/07/18 00:37:52 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 20
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 17
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 18
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 15
+19/07/18 00:37:52 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8345 bytes)
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 25
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 27
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 28
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 13
+19/07/18 00:37:52 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 11
+19/07/18 00:37:52 INFO FileScanRDD: Reading File path: file:///C:/Users/raber/Documents/Projects/saturn/sample-application, range: 0-492, partition values: [empty row]
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 16
+19/07/18 00:37:52 INFO ContextCleaner: Cleaned accumulator 19
+19/07/18 00:37:52 INFO CodeGenerator: Code generated in 20.2064 ms
+19/07/18 00:37:52 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1319 bytes result sent to driver
+19/07/18 00:37:52 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 130 ms on localhost (executor driver) (1/1)
+19/07/18 00:37:52 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+19/07/18 00:37:52 INFO DAGScheduler: ResultStage 1 (showString at <unknown>:0) finished in 0.195 s
+19/07/18 00:37:52 INFO DAGScheduler: Job 1 finished: showString at <unknown>:0, took 0.218213 s
++-----------------+--------------------+--------------------+
+|applicationNumber|        customerInfo|           quoteInfo|
++-----------------+--------------------+--------------------+
+|    129343-111010|[231313-233233, J...|[[Mercedes-Benz R...|
++-----------------+--------------------+--------------------+
+
+[2019-07-17T16:37:53.0347227Z] [RBLADE] [Debug] [ConfigurationService] Using the environment variable to construct .NET worker path: C:\spark\Microsoft.Spark.Worker-0.3.0\Microsoft.Spark.Worker.exe.
+19/07/18 00:37:53 INFO FileSourceStrategy: Pruning directories with: 
+19/07/18 00:37:53 INFO FileSourceStrategy: Post-Scan Filters: 
+19/07/18 00:37:53 INFO FileSourceStrategy: Output Data Schema: struct<applicationNumber: string, customerInfo: struct<contactNumber: string, firstName: string, lastName: string ... 1 more fields>, quoteInfo: array<struct<dealer:string,msrp:bigint,quoteNumber:string,showroom:string,vehicleInfo:struct<assetClass:string,assetModel:string>>> ... 1 more fields>
+19/07/18 00:37:53 INFO FileSourceScanExec: Pushed Filters:
+19/07/18 00:37:53 INFO CodeGenerator: Code generated in 11.0674 ms
+19/07/18 00:37:53 INFO CodeGenerator: Code generated in 20.342 ms
+19/07/18 00:37:53 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 282.6 KB, free 365.4 MB)
+19/07/18 00:37:53 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.4 MB)
+19/07/18 00:37:53 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on RBLADE:61835 (size: 23.3 KB, free: 366.2 MB)
+19/07/18 00:37:53 INFO SparkContext: Created broadcast 4 from showString at <unknown>:0
+19/07/18 00:37:53 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194796 bytes, open cost is considered as scanning 4194304 bytes.
+19/07/18 00:37:53 INFO SparkContext: Starting job: showString at <unknown>:0
+19/07/18 00:37:53 INFO DAGScheduler: Got job 2 (showString at <unknown>:0) with 1 output partitions
+19/07/18 00:37:53 INFO DAGScheduler: Final stage: ResultStage 2 (showString at <unknown>:0)
+19/07/18 00:37:53 INFO DAGScheduler: Parents of final stage: List()
+19/07/18 00:37:53 INFO DAGScheduler: Missing parents: List()
+19/07/18 00:37:53 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[13] at showString at <unknown>:0), which has no missing parents
+19/07/18 00:37:53 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 24.5 KB, free 365.4 MB)
+19/07/18 00:37:53 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 10.5 KB, free 365.3 MB)
+19/07/18 00:37:53 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on RBLADE:61835 (size: 10.5 KB, free: 366.2 MB)
+19/07/18 00:37:53 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+19/07/18 00:37:53 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[13] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/07/18 00:37:53 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+19/07/18 00:37:53 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 8345 bytes)
+19/07/18 00:37:53 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+19/07/18 00:37:53 INFO CodeGenerator: Code generated in 6.6244 ms
+DotnetWorker PID:[18732] Args:[-m pyspark.worker] SparkVersion:[2.4.1]
+[2019-07-17T16:37:53.6139829Z] [RBLADE] [Info] [SimpleWorker] RunSimpleWorker() is starting with port = 61841.
+[2019-07-17T16:37:53.6301964Z] [RBLADE] [Info] [TaskRunner] [0] Starting with ReuseSocket[False].
+19/07/18 00:37:53 INFO FileScanRDD: Reading File path: file:///C:/Users/raber/Documents/Projects/saturn/sample-application, range: 0-492, partition values: [empty row]
+19/07/18 00:37:53 INFO CodeGenerator: Code generated in 14.2589 ms
+[2019-07-17T16:37:53.7308874Z] [RBLADE] [Error] [TaskRunner] [0] ProcessStream() failed with exception: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Work19/07/18 00:37:53 ERROR Executor: Exception in task 0.0 in stage 2.0 (TID 2)
+org.apache.spark.api.python.PythonException: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:452)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:81)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:406)
+        at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+        at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+        at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+        at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+        at org.apache.spark.scheduler.Task.run(Task.scala:121)
+        at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:403)
+        at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:409)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+er\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+[2019-07-17T16:37:53.7317547Z] [RBLADE] [Error] [TaskRunner] [0] Exiting with exception: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+   at Microsoft.Spark.Worker.TaskRunner.Run() in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 58
+
+
+[2019-07-17T16:37:53.7321486Z] [RBLADE] [Info] [TaskRunner] [0] Finished running 0 task(s).
+[2019-07-17T16:37:53.7321601Z] [RBLADE] [Info] [SimpleWorker] RunSimpleWorker() finished successfully
+19/07/18 00:37:53 WARN TaskSetManager: Lost task 0.0 in stage 2.0 (TID 2, localhost, executor driver): org.apache.spark.api.python.PythonException: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:452)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:81)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:406)
+        at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+        at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+        at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+        at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+        at org.apache.spark.scheduler.Task.run(Task.scala:121)
+        at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:403)
+        at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:409)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+19/07/18 00:37:53 ERROR TaskSetManager: Task 0 in stage 2.0 failed 1 times; aborting job
+19/07/18 00:37:53 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+19/07/18 00:37:53 INFO TaskSchedulerImpl: Cancelling stage 2
+19/07/18 00:37:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage cancelled
+19/07/18 00:37:53 INFO DAGScheduler: ResultStage 2 (showString at <unknown>:0) failed in 0.582 s due to Job aborted due to stage failure: Task 0 in stage 2.0 failed 1 times, most recent failure: Lost task 0.0 in stage 
+2.0 (TID 2, localhost, executor driver): org.apache.spark.api.python.PythonException: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:452)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:81)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:406)
+        at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+        at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+        at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+        at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+        at org.apache.spark.scheduler.Task.run(Task.scala:121)
+        at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:403)
+        at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:409)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+19/07/18 00:37:53 INFO DAGScheduler: Job 2 failed: showString at <unknown>:0, took 0.649668 s
+19/07/18 00:37:54 ERROR DotnetBackendHandler: methods:
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.limit(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.cache()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public long org.apache.spark.sql.Dataset.count()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.String org.apache.spark.sql.Dataset.toString()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public boolean org.apache.spark.sql.Dataset.isEmpty()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset,scala.collection.Seq,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset,org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset,org.apache.spark.sql.Column,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.join(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Column org.apache.spark.sql.Dataset.apply(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.collect()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.DataFrameWriter org.apache.spark.sql.Dataset.write()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.catalyst.expressions.NamedExpression org.apache.spark.sql.Dataset.resolve(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.first()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.head()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.head(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sort(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sort(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sort(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sort(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.filter(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.filter(org.apache.spark.api.java.function.FilterFunction)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.filter(scala.Function1)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.filter(org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.map(scala.Function1,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.map(org.apache.spark.api.java.function.MapFunction,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.reduce(scala.Function2)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.reduce(org.apache.spark.api.java.function.ReduceFunction)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.toJSON()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.TypedColumn)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.select(org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn,org.apache.spark.sql.TypedColumn) 
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.checkpoint()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.checkpoint(boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.transform(scala.Function1)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.foreach(org.apache.spark.api.java.function.ForeachFunction)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.foreach(scala.Function1)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.flatMap(org.apache.spark.api.java.function.FlatMapFunction,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.flatMap(scala.Function1,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.groupBy(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.groupBy(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.groupBy(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.groupBy(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.take(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.drop(org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.drop(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.drop(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.drop(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.union(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.distinct()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.intersect(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.joinWith(org.apache.spark.sql.Dataset,org.apache.spark.sql.Column,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.joinWith(org.apache.spark.sql.Dataset,org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public boolean org.apache.spark.sql.Dataset.isLocal()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.describe(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.describe(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.alias(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.alias(scala.Symbol)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sample(boolean,double)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sample(boolean,double,long)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sample(double)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sample(double,long)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.where(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.where(org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.DataFrameStatFunctions org.apache.spark.sql.Dataset.stat()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.summary(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.summary(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sortWithinPartitions(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sortWithinPartitions(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sortWithinPartitions(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.sortWithinPartitions(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public boolean org.apache.spark.sql.Dataset.showString$default$3()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.util.List org.apache.spark.sql.Dataset.randomSplitAsList(double[],long)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.createOrReplaceGlobalTempView(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public int org.apache.spark.sql.Dataset.showString$default$2()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.registerTempTable(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.createGlobalTempView(java.lang.String) throws org.apache.spark.sql.AnalysisException
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.createOrReplaceTempView(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withColumnRenamed(java.lang.String,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object[] org.apache.spark.sql.Dataset.collectAsArrowToPython()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartitionByRange(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartitionByRange(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartitionByRange(int,org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartitionByRange(int,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Column org.apache.spark.sql.Dataset.col(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object[] org.apache.spark.sql.Dataset.toPythonIterator()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object[] org.apache.spark.sql.Dataset.getRowsToPython(int,int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.rdd.RDD org.apache.spark.sql.Dataset.toArrowBatchRdd()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.rdd.RDD org.apache.spark.sql.Dataset.toArrowBatchRdd(org.apache.spark.sql.execution.SparkPlan)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.hint(java.lang.String,java.lang.Object[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.hint(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$withPlan(org.apache.spark.sql.catalyst.plans.logical.LogicalPlan)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public scala.reflect.ClassTag org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$classTag()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.catalyst.expressions.Expression org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$deserializer()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.execution.QueryExecution org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$rddQueryExecution()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collectFromPlan(org.apache.spark.sql.execution.SparkPlan)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final scala.collection.TraversableOnce org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$rowFunction$1(org.apache.spark.sql.Row,scala.Function1,org.apache.spark.sql.types.DataType)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.toDF()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.toDF(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.toDF(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.as(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.as(org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.as(scala.Symbol)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.rollup(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.rollup(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.rollup(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.rollup(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartition(int,org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartition(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartition(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartition(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.repartition(int,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.cube(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.cube(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.cube(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.RelationalGroupedDataset org.apache.spark.sql.Dataset.cube(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.dropDuplicates(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.dropDuplicates(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.dropDuplicates(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.dropDuplicates()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.dropDuplicates(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.orderBy(java.lang.String,java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.orderBy(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.orderBy(org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.orderBy(java.lang.String,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public scala.collection.Seq org.apache.spark.sql.Dataset.getRows(int,int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.selectExpr(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.selectExpr(java.lang.String[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.agg(scala.collection.immutable.Map)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.agg(java.util.Map)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.agg(scala.Tuple2,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.agg(org.apache.spark.sql.Column,org.apache.spark.sql.Column[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.agg(org.apache.spark.sql.Column,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.catalyst.encoders.ExpressionEncoder org.apache.spark.sql.Dataset.exprEnc()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.String org.apache.spark.sql.Dataset.showString(int,int,boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public scala.collection.Seq org.apache.spark.sql.Dataset.numericColumns()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public scala.Tuple2[] org.apache.spark.sql.Dataset.dtypes()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show(boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show(int,int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show(int,boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.show(int,int,boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.selectUntyped(scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withWatermark(java.lang.String,java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.explain()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.explain(boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.localCheckpoint()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.localCheckpoint(boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.crossJoin(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.KeyValueGroupedDataset org.apache.spark.sql.Dataset.groupByKey(org.apache.spark.api.java.function.MapFunction,org.apache.spark.sql.Encoder)     
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.KeyValueGroupedDataset org.apache.spark.sql.Dataset.groupByKey(scala.Function1,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Column org.apache.spark.sql.Dataset.colRegex(java.lang.String)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.DataFrameNaFunctions org.apache.spark.sql.Dataset.na()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.exceptAll(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.unionAll(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.except(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset[] org.apache.spark.sql.Dataset.randomSplit(double[],long)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset[] org.apache.spark.sql.Dataset.randomSplit(double[])
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset[] org.apache.spark.sql.Dataset.randomSplit(scala.collection.immutable.List,long)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.mapPartitionsInR(byte[],byte[],org.apache.spark.broadcast.Broadcast[],org.apache.spark.sql.types.StructType)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.foreachPartition(org.apache.spark.api.java.function.ForeachPartitionFunction)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.foreachPartition(scala.Function1)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.unpersist(boolean)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.unpersist()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.explode(java.lang.String,java.lang.String,scala.Function1,scala.reflect.api.TypeTags$TypeTag)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.explode(scala.collection.Seq,scala.Function1,scala.reflect.api.TypeTags$TypeTag)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.api.java.JavaRDD org.apache.spark.sql.Dataset.javaRDD()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.createTempView(java.lang.String) throws org.apache.spark.sql.AnalysisException
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.persist()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.persist(org.apache.spark.storage.StorageLevel)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withColumns(scala.collection.Seq,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withColumns(scala.collection.Seq,scala.collection.Seq,scala.collection.Seq)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.util.Iterator org.apache.spark.sql.Dataset.toLocalIterator()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.String[] org.apache.spark.sql.Dataset.inputFiles()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.api.java.JavaRDD org.apache.spark.sql.Dataset.javaToPython()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.coalesce(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withColumn(java.lang.String,org.apache.spark.sql.Column)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.withColumn(java.lang.String,org.apache.spark.sql.Column,org.apache.spark.sql.types.Metadata)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.Object[] org.apache.spark.sql.Dataset.collectToPython()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.api.java.JavaRDD org.apache.spark.sql.Dataset.toJavaRDD()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.unionByName(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.util.List org.apache.spark.sql.Dataset.collectAsList()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.streaming.DataStreamWriter org.apache.spark.sql.Dataset.writeStream()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.util.List org.apache.spark.sql.Dataset.takeAsList(int)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.intersectAll(org.apache.spark.sql.Dataset)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.rdd.RDD org.apache.spark.sql.Dataset.rdd()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.mapPartitions(org.apache.spark.api.java.function.MapPartitionsFunction,org.apache.spark.sql.Encoder)       
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.mapPartitions(scala.Function1,org.apache.spark.sql.Encoder)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.catalyst.plans.logical.LogicalPlan org.apache.spark.sql.Dataset.logicalPlan()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.SQLContext org.apache.spark.sql.Dataset.sqlContext()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.types.StructType org.apache.spark.sql.Dataset.schema()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public static org.apache.spark.sql.Dataset org.apache.spark.sql.Dataset.ofRows(org.apache.spark.sql.SparkSession,org.apache.spark.sql.catalyst.plans.logical.LogicalPlan)   
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public boolean org.apache.spark.sql.Dataset.isStreaming()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public void org.apache.spark.sql.Dataset.printSchema()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public java.lang.String[] org.apache.spark.sql.Dataset.columns()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.execution.QueryExecution org.apache.spark.sql.Dataset.queryExecution()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.sql.SparkSession org.apache.spark.sql.Dataset.sparkSession()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public org.apache.spark.storage.StorageLevel org.apache.spark.sql.Dataset.storageLevel()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final void java.lang.Object.wait() throws java.lang.InterruptedException
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public boolean java.lang.Object.equals(java.lang.Object)
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public native int java.lang.Object.hashCode()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final native java.lang.Class java.lang.Object.getClass()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final native void java.lang.Object.notify()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: public final native void java.lang.Object.notifyAll()
+19/07/18 00:37:54 ERROR DotnetBackendHandler: args:
+19/07/18 00:37:54 ERROR DotnetBackendHandler: argType: java.lang.Integer, argValue: 20
+19/07/18 00:37:54 ERROR DotnetBackendHandler: argType: java.lang.Integer, argValue: 20
+19/07/18 00:37:54 ERROR DotnetBackendHandler: argType: java.lang.Boolean, argValue: false
+[2019-07-17T16:37:54.8955672Z] [RBLADE] [Error] [JvmBridge] JVM method execution failed: Nonstatic method showString failed for class 16 when called with 3 arguments ([Index=1, Type=Int32, Value=20], [Index=2, Type=Int32, Value=20], [Index=3, Type=Boolean, Value=False], )
+[2019-07-17T16:37:54.8955949Z] [RBLADE] [Error] [JvmBridge] org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 2.0 failed 1 times, most recent failure: Lost task 0.0 in stage 2.0 (TID 2, localhost, executor driver): org.apache.spark.api.python.PythonException: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:452)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:81)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:406)
+        at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+        at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+        at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+        at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+        at org.apache.spark.scheduler.Task.run(Task.scala:121)
+        at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:403)
+        at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:409)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+        at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1889)
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1877)
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1876)
+        at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+        at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+        at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1876)
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+        at scala.Option.foreach(Option.scala:257)
+        at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:926)
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2110)
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2059)
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2048)
+        at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+        at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:737)
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+        at org.apache.spark.sql.execution.SparkPlan.executeTake(SparkPlan.scala:365)
+        at org.apache.spark.sql.execution.CollectLimitExec.executeCollect(limit.scala:38)
+        at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collectFromPlan(Dataset.scala:3383)
+        at org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2544)
+        at org.apache.spark.sql.Dataset$$anonfun$head$1.apply(Dataset.scala:2544)
+        at org.apache.spark.sql.Dataset$$anonfun$53.apply(Dataset.scala:3364)
+        at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:78)
+        at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:125)
+        at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:73)
+        at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3363)
+        at org.apache.spark.sql.Dataset.head(Dataset.scala:2544)
+        at org.apache.spark.sql.Dataset.take(Dataset.scala:2758)
+        at org.apache.spark.sql.Dataset.getRows(Dataset.scala:254)
+        at org.apache.spark.sql.Dataset.showString(Dataset.scala:291)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.apache.spark.api.dotnet.DotnetBackendHandler.handleMethodCall(DotnetBackendHandler.scala:162)
+        at org.apache.spark.api.dotnet.DotnetBackendHandler.handleBackendRequest(DotnetBackendHandler.scala:102)
+        at org.apache.spark.api.dotnet.DotnetBackendHandler.channelRead0(DotnetBackendHandler.scala:29)
+        at org.apache.spark.api.dotnet.DotnetBackendHandler.channelRead0(DotnetBackendHandler.scala:24)
+        at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+        at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+        at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+        at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+        at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310)
+        at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+        at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+        at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+        at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+        at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:138)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+        at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+        at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.spark.api.python.PythonException: System.IO.FileNotFoundException: Could not load file or assembly 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'. The system cannot find the file specified.   
+File name: 'C:\spark\Microsoft.Spark.Worker-0.3.0\Saturn.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Microsoft.Spark.Utils.UdfSerDe.LoadAssembly(String manifestModuleName) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 208
+   at Microsoft.Spark.Utils.UdfSerDe.<>c__DisplayClass10_0.<DeserializeType>b__0(TypeData td) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 187
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Spark.Utils.UdfSerDe.Deserialize(UdfData udfData) in /_/src/csharp/Microsoft.Spark/Utils/UdfSerDe.cs:line 91
+   at Microsoft.Spark.Utils.CommandSerDe.DeserializeUdfs[T](UdfWrapperData data, Int32& nodeIndex, Int32& udfIndex) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 266
+   at Microsoft.Spark.Utils.CommandSerDe.Deserialize[T](Stream stream, SerializedMode& serializerMode, SerializedMode& deserializerMode, String& runMode) in /_/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs:line 225 
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.ReadSqlCommands(PythonEvalType evalType, Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 161
+   at Microsoft.Spark.Worker.Processor.CommandProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\CommandProcessor.cs:line 39
+   at Microsoft.Spark.Worker.Processor.PayloadProcessor.Process(Stream stream) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\Processor\PayloadProcessor.cs:line 71
+   at Microsoft.Spark.Worker.TaskRunner.ProcessStream(Stream inputStream, Stream outputStream, Version version, Boolean& readComplete) in D:\a\1\s\src\csharp\Microsoft.Spark.Worker\TaskRunner.cs:line 136
+
+
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:452)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:81)
+        at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+        at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:406)
+        at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+        at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage2.processNext(Unknown Source)
+        at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+        at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+        at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+        at org.apache.spark.scheduler.Task.run(Task.scala:121)
+        at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:403)
+        at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:409)
+        at java.util.concurrent.ThreadPoolExecutor.runW19/07/18 00:37:55 INFO DotnetRunner: Closing DotnetBackend
+orker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        ... 1 more
+
+[2019-07-17T16:37:55.1137932Z] [RBLADE] [Exception] [JvmBridge] JVM method execution failed: Nonstatic method showString failed for class 16 when called with 3 arguments ([Index=1, Type=Int32, Value=20], [Index=2, Type=Int32, Value=20], [Index=3, Type=Boolean, Value=False], )
+   at Microsoft.Spark.Interop.Ipc.JvmBridge.CallJavaMethod(Boolean isStatic, Object classNameOrJvmObjectReference, String methodName, Object[] args)
+
+Unhandled Exception: System.Exception: JVM method execution failed: Nonstatic method showString failed for class 16 when called with 3 arguments ([Index=1, Type=Int32, Value=20], [Index=2, Type=Int32, Value=20], [Index=3, Type=Boolean, Value=False], )
+   at Microsoft.Spark.Interop.Ipc.JvmBridge.CallJavaMethod(Boolean isStatic, Object classNameOrJvmObjectReference, String methodName, Object[] args)
+   at Microsoft.Spark.Interop.Ipc.JvmBridge.CallNonStaticJavaMethod(JvmObjectReference objectId, String methodName, Object[] args)
+   at Microsoft.Spark.Sql.DataFrame.Show(Int32 numRows, Int32 truncate, Boolean vertical)
+   at Saturn.Program.Main(String[] args) in C:\Users\raber\Documents\Projects\saturn\Program.cs:line 53
+19/07/18 00:37:55 INFO DotnetBackend: Requesting to close all call back sockets
+19/07/18 00:37:55 INFO SparkContext: Invoking stop() from shutdown hook
+19/07/18 00:37:55 INFO SparkUI: Stopped Spark web UI at http://RBLADE:4040
+19/07/18 00:37:55 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/07/18 00:37:55 INFO MemoryStore: MemoryStore cleared
+19/07/18 00:37:55 INFO BlockManager: BlockManager stopped
+19/07/18 00:37:55 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/07/18 00:37:55 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/07/18 00:37:55 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336
+java.io.IOException: Failed to delete: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336\microsoft-spark-2.4.x-0.3.0.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1062)
+        at org.apache.spark.SparkEnv.stop(SparkEnv.scala:103)
+        at org.apache.spark.SparkContext$$anonfun$stop$11.apply$mcV$sp(SparkContext.scala:1974)
+        at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1340)
+        at org.apache.spark.SparkContext.stop(SparkContext.scala:1973)
+        at org.apache.spark.SparkContext$$anonfun$2.apply$mcV$sp(SparkContext.scala:575)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at scala.util.Try$.apply(Try.scala:192)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+19/07/18 00:37:55 INFO SparkContext: Successfully stopped SparkContext
+19/07/18 00:37:55 INFO ShutdownHookManager: Shutdown hook called
+19/07/18 00:37:55 INFO ShutdownHookManager: Deleting directory C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38
+19/07/18 00:37:55 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38
+java.io.IOException: Failed to delete: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336\microsoft-spark-2.4.x-0.3.0.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1062)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at scala.util.Try$.apply(Try.scala:192)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+19/07/18 00:37:55 INFO ShutdownHookManager: Deleting directory C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336
+19/07/18 00:37:55 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336
+java.io.IOException: Failed to delete: C:\Users\raber\AppData\Local\Temp\spark-a0825d35-5fa6-421d-bebb-4e4213ea2b38\userFiles-8318269b-6ce2-4a9b-aa2b-f621b1774336\microsoft-spark-2.4.x-0.3.0.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1062)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1$$anonfun$apply$mcV$sp$3.apply(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+        at org.apache.spark.util.ShutdownHookManager$$anonfun$1.apply$mcV$sp(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:216)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1945)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:188)
+        at scala.util.Try$.apply(Try.scala:192)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+19/07/18 00:37:55 INFO ShutdownHookManager: Deleting directory C:\Users\raber\AppData\Local\Temp\spark-4a92143b-b55f-43c2-8636-2e72c54581ce
+
+C:\Users\raber\Documents\Projects\saturn>  

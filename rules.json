@@ -1,0 +1,14 @@
+[
+    {
+        "propertyName": "applicationId",
+        "mapSource": "applicationNumber"
+    },
+    {
+        "propertyName": "applicationContact",
+        "mapSource": "customerInfo.contactNumber"
+    },
+    {
+        "propertyName": "applicationContactName",
+        "mapSource": "customerInfo.firstName"
+    }
+]
